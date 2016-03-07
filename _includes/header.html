@@ -33,7 +33,10 @@
 	  				</div>
 	  			</div>
 	  		</div>
-	  	<router-outlet></router-outlet>
+	  		{% if page.url == "/" %}
+   			<my-app>Loading...</my-app>
+			{% endif %}
+	  		 
 	  </div>
 	</div>
 </header>

@@ -7,6 +7,30 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+    <!-- 1. Load libraries -->
+    {% if page.url == "/" %}
+    <script src="assets/lib/es6-shim.js"></script>
+    <script src="assets/lib/angular2-polyfills.js"></script>
+    <script src="assets/lib/system.src.js"></script>
+    <script src="assets/lib/Rx.js"></script>
+    <script src="assets/lib/angular2.dev.js"></script>
+    <script src="assets/lib/router.dev.js"></script>
+    <script src="assets/lib/string.min.js"></script>
+
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>
+    {% endif %}
+
   <!--CSS -->
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
