@@ -1,0 +1,84 @@
+/********************
+* Idifly CSS
+********************/
+
+/* Corporate color: 28669F */
+
+.web-navbar {
+    padding-top: 30px !important;
+    font-weight: 500;
+    letter-spacing: .05em;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF;
+}
+
+.web-navbar>a {
+	color: #FFFFFF;
+}
+
+@media (min-width: 768px)
+.web-navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar-brand {
+  padding: 0px;
+  padding-left: 3px;
+}
+.navbar-brand>img {
+  height: 100%;
+  width: auto;
+}
+
+.center {
+    text-align:center;
+}
+
+.center form {
+    display:inline-block;
+}
+
+.generic-id-generation-form {
+    
+    margin-bottom: 20px;
+}
+
+.home-result {
+	color: white;
+}
+
+
+.home-background {
+    background-image: url(/assets/images/startup-1.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+@media (min-width: 1120px), (min-height: 630px) {
+    home-background { background-size: auto; }
+}
+
+
+.home-jumbotron {
+    color: white;
+    background-color: transparent;
+}
+
+.footer {
+     background-color: #262F36;
+     color: white;
+     padding-top: 100px;
+     padding-bottom: 100px;
+}
+
+.footer h5{
+    padding-bottom: 10px;
+}
+
